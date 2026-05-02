@@ -9,5 +9,5 @@ services:
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=db
-      - MYSQL_USER=db
+      - MYSQL_USER=app
       - MYSQL_PASSWORD=pass
