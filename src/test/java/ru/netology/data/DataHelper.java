@@ -7,10 +7,10 @@ import lombok.Value;
 
 import java.util.Locale;
 
-public class dataHelper {
+public class DataHelper {
     private static final Faker faker = new Faker(new Locale("en"));
 
-    private dataHelper() {
+    private DataHelper() {
 
     }
 
@@ -31,8 +31,8 @@ public class dataHelper {
     }
 
 
-    public static dataHelper.VerificationCode getVerificationCode() {
+    public static DataHelper.VerificationCode getVerificationCode() {
 
-       return new dataHelper.VerificationCode(faker.numerify("######"));
+       return new DataHelper.VerificationCode(faker.numerify("######"));
    }
 }

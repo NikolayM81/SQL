@@ -16,11 +16,11 @@ public class SQLHelper {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/db", "app", "pass");
     }
 
-    public static dataHelper.@Nullable VerificationCode getVerifacationCode() throws SQLException {
+    public static DataHelper.@Nullable VerificationCode getVerifacationCode() throws SQLException {
         var codeSQL = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1";
         try (var conn = getConn()) {
             var code = runner.query(conn, codeSQL, new ScalarHandler<String>());
-            return new dataHelper.VerificationCode(code);
+            return new DataHelper.VerificationCode(code);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

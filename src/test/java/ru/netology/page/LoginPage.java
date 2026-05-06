@@ -2,8 +2,7 @@ package ru.netology.page;
 
 import com.codeborne.selenide.SelenideElement;
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
-import ru.netology.data.dataHelper;
-import ru.netology.data.dataHelper;
+import ru.netology.data.DataHelper;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -12,7 +11,7 @@ public class LoginPage {
     private SelenideElement passwordField = $("[data-test-id=password] input");
     private SelenideElement loginButton = $("[data-test-id=action-login]");
 
-    public VerificationPage validLogin(dataHelper.@MonotonicNonNull AuthInfo info) {
+    public VerificationPage validLogin(DataHelper.@MonotonicNonNull AuthInfo info) {
         loginField.setValue(info.getLogin());
         passwordField.setValue(info.getPassword());
         loginButton.click();
