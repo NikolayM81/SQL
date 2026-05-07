@@ -2,11 +2,13 @@ package ru.netology.page;
 
 
 import com.codeborne.selenide.SelenideElement;
+import lombok.Getter;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
+@Getter
 public class DashboardPage {
     private final SelenideElement heading = $("[data-test-id=dashboard]");
 
@@ -15,7 +17,5 @@ public class DashboardPage {
     }
 
 
-    public SelenideElement getHeading() {
-        return heading;
-    }
 }
+

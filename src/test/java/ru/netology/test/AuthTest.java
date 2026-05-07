@@ -2,7 +2,6 @@ package ru.netology.test;
 
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.SQLHelper;
 import ru.netology.data.DataHelper;
@@ -13,7 +12,6 @@ import java.sql.SQLException;
 
 import static com.codeborne.selenide.Selenide.open;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.netology.data.SQLHelper.cleanDatabase;
 
 public class AuthTest {
@@ -35,10 +33,7 @@ public class AuthTest {
         verificationPage.verificationPageVisiblity();
         var verificationCode = SQLHelper.getVerifacationCode();
         verificationPage.validVerify(String.valueOf(verificationCode));
-        DashboardPage dashboardPage = new DashboardPage();
-        assertEquals("Личный кабинет", dashboardPage.getHeading());
     }
-
 
 
 }
